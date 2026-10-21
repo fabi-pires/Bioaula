@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BioAulas — aulas de Ciências e Biologia com a professora Fabiele Pires.">
+  <title>BioAulas | Professora Fabiele Pires</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4b6d8f5d2d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+  <header>
+    <a class="logo" href="#inicio" aria-label="BioAulas - início">
+      <h1><i class="fas fa-leaf"></i> BioAulas</h1>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+    <nav id="nav">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#disciplinas">Disciplinas</a></li>
+        <li><a href="#matricula">Matrícula</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><button id="themeBtn" class="theme-btn" type="button">🌙 Tema escuro</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-texto">
+        <span class="eyebrow">Ciência que faz sentido</span>
+        <h2>Aprender Biologia pode ser leve, prático e divertido.</h2>
+        <p>Conteúdo explicado de forma clara para ajudar você a entender a vida, a ciência e o mundo ao seu redor.</p>
+        <div class="hero-actions">
+          <a class="botao" href="#matricula">Quero me matricular</a>
+          <a class="botao botao-outline" href="#sobre">Conheça a BioAulas</a>
+        </div>
+      </div>
+      <div class="hero-imagem" aria-hidden="true">
+        <div class="science-orb"><i class="fas fa-dna"></i></div>
+        <div class="floating-card card-one"><i class="fas fa-microscope"></i><span>Ciência</span></div>
+        <div class="floating-card card-two"><i class="fas fa-seedling"></i><span>Vida</span></div>
+      </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+      <div class="foto-professora" aria-hidden="true"><div class="teacher-placeholder"><i class="fas fa-chalkboard-teacher"></i></div></div>
+      <div class="texto">
+        <span class="section-tag">Sobre a professora</span>
+        <h2>Olá! Eu sou a professora Fabiele.</h2>
+        <p>A BioAulas nasceu para tornar o estudo de Ciências e Biologia mais próximo da realidade dos alunos, com explicações objetivas e uma abordagem acolhedora.</p>
+        <p>Aqui, cada conteúdo é pensado para facilitar a compreensão e transformar dúvidas em conhecimento.</p>
+      </div>
+    </section>
+
+    <section class="vantagens">
+      <span class="section-tag">Por que estudar aqui?</span>
+      <h2>Uma experiência feita para você</h2>
+      <div class="cards vantagens-cards">
+        <article class="card"><i class="fas fa-lightbulb"></i><h3>Explicação clara</h3><p>Conteúdos apresentados de maneira simples e organizada.</p></article>
+        <article class="card"><i class="fas fa-book-open"></i><h3>Material de apoio</h3><p>Recursos para revisar os principais assuntos e fixar o aprendizado.</p></article>
+        <article class="card"><i class="fas fa-heart"></i><h3>Acolhimento</h3><p>Um ambiente de aprendizagem respeitoso, leve e motivador.</p></article>
+      </div>
+    </section>
+
+    <section class="disciplinas" id="disciplinas">
+      <span class="section-tag">Áreas de estudo</span>
+      <h2>Disciplinas</h2>
+      <div class="cards">
+        <article class="card"><i class="fas fa-leaf"></i><h3>Biologia</h3><p>Ecologia, genética, evolução, citologia e muito mais.</p></article>
+        <article class="card"><i class="fas fa-microscope"></i><h3>Ciências</h3><p>Conteúdos fundamentais para compreender a natureza e a vida.</p></article>
+        <article class="card"><i class="fas fa-dna"></i><h3>Genética</h3><p>Conceitos e exercícios para entender hereditariedade e DNA.</p></article>
+        <article class="card"><i class="fas fa-tree"></i><h3>Ecologia</h3><p>Relações entre os seres vivos e o ambiente em que vivem.</p></article>
+      </div>
+    </section>
+
+    <section class="matricula" id="matricula">
+      <div class="section-heading"><span class="section-tag">Comece agora</span><h2>Faça sua matrícula</h2><p>Preencha seus dados e envie sua solicitação.</p></div>
+      <form class="form-matricula" id="matriculaForm">
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" type="text" placeholder="Seu nome" required>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" placeholder="voce@email.com" required>
+        <label for="disciplina">Disciplina de interesse</label>
+        <select id="disciplina" name="disciplina" required>
+          <option value="">Selecione</option><option>Biologia</option><option>Ciências</option><option>Genética</option><option>Ecologia</option>
+        </select>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre o que você precisa."></textarea>
+        <button type="submit">Enviar matrícula</button>
+        <p class="form-feedback" id="formFeedback" role="status"></p>
+      </form>
+    </section>
+
+    <section class="contato" id="contato">
+      <span class="section-tag">Fale comigo</span>
+      <h2>Contato</h2>
+      <p>Quer tirar uma dúvida ou saber mais sobre as aulas?</p>
+      <a class="instagram" href="https://www.instagram.com/profa.fabipires/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> @profa.fabipires</a>
+    </section>
+  </main>
+
+  <footer><p>© <span id="year"></span> BioAulas — Professora Fabiele Pires</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
